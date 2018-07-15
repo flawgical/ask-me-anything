@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/flawgical/ask-me-anything/issues"
   },
-  "homepage": "https://github.com/flawgical/ask-me-anything#readme"
+  "homepage": "https://github.com/flawgical/ask-me-anything#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.3"
+  }
 }
