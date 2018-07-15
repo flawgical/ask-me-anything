@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-//food is the name of our database
+//question is the name of our database
 //that is automatically created
 mongoose.connect('mongodb://localhost/question');
 

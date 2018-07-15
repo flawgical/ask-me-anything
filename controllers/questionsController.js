@@ -1,20 +1,19 @@
 const express = require('express');
-// Next we set up the Router
 const router = express.Router();
 // require Our Model - Remember Model is
 // a representation of our data
 // The model should capitalized
 const Questions = require('../models/questions');
 // Creating the index route
-// index route should show all the fruits
+// index route should show all the questions
 router.get('/', (req, res) => {
-  // finding every fruit without a search parameter
+  // finding every question without a search parameter
   Questions.find({}, (err, allQuestions) => {
     if(err){
       res.send(err);
     } else {
 
-      // allFruits is the response from are db
+      // allquestions is the response from are db
       // when you are finding all of something it
       // returns an array
         res.render('index.ejs', {
@@ -112,7 +111,7 @@ router.put('/:id', (req, res) => {
 // Delete route
 router.delete('/:id', (req, res) => {
 
-  // Delete a specific fruit
+  // Delete a specific question
   console.log(req.params.id, ' this is params in delete')
   Questions.findByIdAndRemove(req.params.id, (err, deletedQuestion) => {
     if(err){
