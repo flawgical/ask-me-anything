@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Question Page</h1>
+
+    <form method="POST" action="/questions/<%=question.id%>?_method=PUT">
+      Question: <input type="text" name="question" value="<%= question.question %>">
+
+      <br/>
+
+      <input type="submit" value="Submit Changes"/>
+
+
+    </form>
+
+
+  </body>
+</html>

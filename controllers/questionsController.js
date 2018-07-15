@@ -9,7 +9,7 @@ const Questions = require('../models/questions');
 // index route should show all the fruits
 router.get('/', (req, res) => {
   // finding every fruit without a search parameter
-  Fruits.find({}, (err, allFruits) => {
+  Questions.find({}, (err, allQuestions) => {
     if(err){
       res.send(err);
     } else {
@@ -60,7 +60,7 @@ router.get('/new', (req, res) => {
 // Edit Route = to display a single question
 router.get('/:id/edit', (req, res) => {
 
-  Fruits.findById(req.params.id, (err, foundQuestion) => {
+  Questions.findById(req.params.id, (err, foundQuestion) => {
       res.render('edit.ejs', {
         question: foundQuestion
       });
